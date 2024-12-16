@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folders</title>
+</head>
+<body>
+    <% folders.forEach(function(folder) { %> 
+	<form action="/folder/<%=folder.name%>" method="post">
+            <input type="hidden" name="folderId" value="<%=folder.uid%>" />
+	    <button type="submit"> 
+		<%= folder.name %>
+	    </button>
+	</form> 
+    <% }); %>
+</body>
+</html>
